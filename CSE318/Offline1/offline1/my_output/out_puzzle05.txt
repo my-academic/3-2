@@ -1,0 +1,18 @@
+solveable
+=========
+starting Hamming
+1 2 3 
+4 5 6 
+7 8 * 
+previous cost = 5 :: huristic cost = 0 :: total cost = 5
+
+expanded : 17
+explored : 6
+starting Manhattan
+1 2 3 
+4 5 6 
+7 8 * 
+previous cost = 5 :: huristic cost = 0 :: total cost = 5
+
+expanded : 17
+explored : 6

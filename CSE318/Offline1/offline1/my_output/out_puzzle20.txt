@@ -1,0 +1,3 @@
+solveable
+=========
+starting Hamming
