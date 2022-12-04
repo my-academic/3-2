@@ -36,7 +36,7 @@ class Board {
             }
             str += "\n";
         }
-        str += "previous cost = " + previous_cost + " :: huristic cost = " + huristic_cost + " :: total cost = " + total_cost + "\n";
+        str += "previous cost = " + previous_cost + " :: huristic cost = " + huristic_cost + " :: total cost = " + total_cost ;
         return str;
     }
 
@@ -64,6 +64,7 @@ class BoardComparator implements Comparator<Board> {
             return 1;
         else if (board1.previous_cost < board2.previous_cost)
             return -1;
+
         return 0;
     }
 }
@@ -134,20 +135,34 @@ public class Main {
             }
         }
         if (solveableOrNot(board, size)) {
-//                System.out.println("solveable\n=========");
-//            System.out.println(board);
             explored = expanded = 0;
-//            solvePuzzleUsingHammingDistance(board);
-//            System.out.println("expanded : " + expanded + "\nexplored : " + explored);
+            solvePuzzleUsingHammingDistance(board);
+            System.out.println("expanded : " + expanded + "\texplored : " + explored);
             explored = expanded = 0;
             boardHashMap.clear();
             boardHashMapDone.clear();
+            System.out.println("\n");
             solvePuzzleUsingManhattanDistance(board);
-            System.out.println("expanded : " + expanded + "\nexplored : " + explored);
+            System.out.println("expanded : " + expanded + "\texplored : " + explored);
+            boardHashMap.clear();
+            boardHashMapDone.clear();
         } else {
-            System.out.println("not solveable");
+            System.out.println("unsolvable");
         }
 //        }
+    }
+
+    private static int step = 0;
+
+
+    private static void printPath(Board board) {
+        if(board == null) return;
+        printPath(board.parent);
+        System.out.println("=============================");
+        System.out.println("step : " + step);
+        step++;
+        System.out.println(board);
+        System.out.println("=============================");
     }
 
 
@@ -155,30 +170,28 @@ public class Main {
     private static HashMap<IntIntArray, Board> boardHashMapDone = new HashMap<IntIntArray, Board>();
 
     private static void solvePuzzleUsingManhattanDistance(Board board) {
+        System.out.println("starting Manhattan");
 
         PriorityQueue<Board> priorityQueue = new PriorityQueue<>(new BoardComparator());
+
+        board.parent = null;
         setManhattanDistance(board);
         priorityQueue.add(board);
         boardHashMap.put(new IntIntArray(board.arr), board);
         while (board.huristic_cost != 0) {
             board = priorityQueue.poll();
-            System.out.println(board);
             makeAMove(board, priorityQueue, true, false);
-
-            long start = System.currentTimeMillis();
-            long end = start + 200;
-            while(true) {
-                if(System.currentTimeMillis() > end) {
-                    break;
-                }
-            }
         }
-        System.out.println(board);
+        System.out.println("optimal cost : " + board.total_cost);
+        System.out.println("printing optimal path:");
+        step = 0;
+        printPath(board);
     }
 
 
+
     private static void solvePuzzleUsingHammingDistance(Board board) {
-//        System.out.println("starting Hamming");
+        System.out.println("starting Hamming");
         PriorityQueue<Board> priorityQueue = new PriorityQueue<>(new BoardComparator());
         setHammingDistance(board);
         priorityQueue.add(board);
@@ -186,10 +199,11 @@ public class Main {
         while (board.huristic_cost != 0) {
             board = priorityQueue.poll();
             makeAMove(board, priorityQueue, false, true);
-
         }
-
-        System.out.println(board);
+        System.out.println("optimal cost : " + board.total_cost);
+        System.out.println("printing optimal path:");
+        step = 0;
+        printPath(board);
     }
 
     private static int[][] pairs = {{0, -1}, {0, 1}, {-1, 0}, {1, 0}};
@@ -233,12 +247,12 @@ public class Main {
                 expanded++;
                 boardHashMap.put(new IntIntArray(arr), board);
             }
-//            else if (boardHashMap.get(new IntIntArray(arr)).total_cost > board.total_cost) {
-//                priorityQueue.remove(boardHashMap.get(new IntIntArray(arr)));
-//                board.parent = b;
-//                priorityQueue.add(board);
-//                boardHashMap.replace(new IntIntArray(arr), board);
-//            }
+            else if (hamming && boardHashMap.get(new IntIntArray(arr)).total_cost > board.total_cost) {
+                priorityQueue.remove(boardHashMap.get(new IntIntArray(arr)));
+                board.parent = b;
+                priorityQueue.add(board);
+                boardHashMap.replace(new IntIntArray(arr), board);
+            }
 
         }
         boardHashMapDone.put(new IntIntArray(b.arr), b);
