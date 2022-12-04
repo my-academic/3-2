@@ -7,6 +7,8 @@ class Board {
     public int previous_cost;
     public int huristic_cost;
 
+    Board parent;
+
     public Board(int[][] arr, int previous_cost) {
         this.arr = arr;
         this.previous_cost = previous_cost + 1;
@@ -120,92 +122,77 @@ public class Main {
     public static void main(String[] args) throws FileNotFoundException {
         File file = new File("input.txt");
         Scanner input = new Scanner(file);
-        int iter = input.nextInt();
-        int size = 3;
+//        int iter = input.nextInt();
+        int size = input.nextInt();
+//        int size = 4;
         Board board = new Board(size);
-        for (int x = 1; x <= iter; x++) {
-            for (int i = 0; i < size; i++) {
-                for (int j = 0; j < size; j++) {
-                    String str = input.next();
-                    board.arr[i][j] = str.equals("*") ? 0 : Integer.parseInt(str);
-                }
+//        for (int x = 1; x <= iter; x++) {
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < size; j++) {
+                String str = input.next();
+                board.arr[i][j] = str.equals("*") ? 0 : Integer.parseInt(str);
             }
-            if (solveableOrNot(board, size)) {
+        }
+        if (solveableOrNot(board, size)) {
 //                System.out.println("solveable\n=========");
 //            System.out.println(board);
-//                solvePuzzleUsingHammingDistance(board);
-//                System.out.println("expanded : " + expanded + "\nexplored : " + explored);
-                explored = expanded = 0;
-                System.out.print("Case " + x + ": ");
-                solvePuzzleUsingManhattanDistance(board);
-//                System.out.println("expanded : " + expanded + "\nexplored : " + explored);
-            } else {
-                System.out.println("Case " + x + ": impossible");
-            }
-            manhattanHashMap.clear();
-            manhattanHashMapDone.clear();
+            explored = expanded = 0;
+//            solvePuzzleUsingHammingDistance(board);
+//            System.out.println("expanded : " + expanded + "\nexplored : " + explored);
+            explored = expanded = 0;
+            boardHashMap.clear();
+            boardHashMapDone.clear();
+            solvePuzzleUsingManhattanDistance(board);
+            System.out.println("expanded : " + expanded + "\nexplored : " + explored);
+        } else {
+            System.out.println("not solveable");
         }
+//        }
     }
+
+
+    private static HashMap<IntIntArray, Board> boardHashMap = new HashMap<IntIntArray, Board>();
+    private static HashMap<IntIntArray, Board> boardHashMapDone = new HashMap<IntIntArray, Board>();
 
     private static void solvePuzzleUsingManhattanDistance(Board board) {
 
-//        System.out.println("starting Manhattan");
         PriorityQueue<Board> priorityQueue = new PriorityQueue<>(new BoardComparator());
         setManhattanDistance(board);
         priorityQueue.add(board);
-        manhattanHashMap.put(new IntIntArray(board.arr), board);
+        boardHashMap.put(new IntIntArray(board.arr), board);
         while (board.huristic_cost != 0) {
             board = priorityQueue.poll();
-//            System.out.println(board);
+            System.out.println(board);
             makeAMove(board, priorityQueue, true, false);
 
-//            long start = System.currentTimeMillis();
-//            long end = start + 10000;
-//            while(true) {
-//                //do your code
-//                //
-//                if(System.currentTimeMillis() > end) {
-//                    break;
-//                }
-//            }
+            long start = System.currentTimeMillis();
+            long end = start + 200;
+            while(true) {
+                if(System.currentTimeMillis() > end) {
+                    break;
+                }
+            }
         }
-        System.out.println(board.total_cost);
+        System.out.println(board);
     }
 
-    private static HashMap<IntIntArray, Board> manhattanHashMap = new HashMap<IntIntArray, Board>();
-    private static HashMap<IntIntArray, Board> manhattanHashMapDone = new HashMap<IntIntArray, Board>();
 
     private static void solvePuzzleUsingHammingDistance(Board board) {
-        System.out.println("starting Hamming");
+//        System.out.println("starting Hamming");
         PriorityQueue<Board> priorityQueue = new PriorityQueue<>(new BoardComparator());
         setHammingDistance(board);
         priorityQueue.add(board);
+        boardHashMap.put(new IntIntArray(board.arr), board);
         while (board.huristic_cost != 0) {
             board = priorityQueue.poll();
-//            System.out.println(board);
-            var x = priorityQueue.toArray();
-//            System.out.println("############## checking #############");
-//            System.out.println("==================");
-//            for(var y: x) {
-//                System.out.println(y);
-//            }
-//            System.out.println("==================");
-
             makeAMove(board, priorityQueue, false, true);
 
-//            long start = System.currentTimeMillis();
-//            long end = start + 1000;
-//            while(true) {
-//                if(System.currentTimeMillis() > end) {
-//                    break;
-//                }
-//            }
         }
 
         System.out.println(board);
     }
 
-    private static int[][] pairs = { {0, -1 }, { 0, 1}, { -1, 0 },  { 1, 0} };
+    private static int[][] pairs = {{0, -1}, {0, 1}, {-1, 0}, {1, 0}};
 
     private static void makeAMove(Board b, PriorityQueue<Board> priorityQueue, boolean manattan, boolean hamming) {
 //        priorityQueue.clear();
@@ -218,7 +205,7 @@ public class Main {
                 }
             }
         }
-        explored ++;
+        explored++;
         for (int i = 0; i < pairs.length; i++) {
 //            System.out.println(b);
             int[][] arr = new int[b.arr.length][b.arr.length];
@@ -229,46 +216,41 @@ public class Main {
             }
             int swap_row = blank_row + pairs[i][0];
             int swap_column = blank_column + pairs[i][1];
-            if(swap_row < 0 || swap_row >= b.arr.length || swap_column < 0 || swap_column >= b.arr.length) continue;
+            if (swap_row < 0 || swap_row >= b.arr.length || swap_column < 0 || swap_column >= b.arr.length) continue;
             arr[blank_row][blank_column] = arr[swap_row][swap_column];
             arr[swap_row][swap_column] = 0;
-//            System.out.println(manhattanHashMapDone.values());
-//            System.out.println("=======================");
-            if(manhattanHashMapDone.containsKey(new IntIntArray(arr))) {
-//                System.out.println("yeessssssss");
+            if (boardHashMapDone.containsKey(new IntIntArray(arr))) {
                 continue;
             }
             Board board = new Board(arr, b.previous_cost);
 
-            if(hamming) setHammingDistance(board);
-            if(manattan) setManhattanDistance(board);
-            if(!manhattanHashMap.containsKey(new IntIntArray(arr))){
+            if (hamming) setHammingDistance(board);
+            if (manattan) setManhattanDistance(board);
+            if (!boardHashMap.containsKey(new IntIntArray(arr))) {
+                board.parent = b;
                 priorityQueue.add(board);
-                expanded ++;
-                manhattanHashMap.put(new IntIntArray(arr), board);
+
+                expanded++;
+                boardHashMap.put(new IntIntArray(arr), board);
             }
-            else if(manhattanHashMap.get(new IntIntArray(arr)).total_cost > board.total_cost) {
-                priorityQueue.remove(manhattanHashMap.get(new IntIntArray(arr)));
-                priorityQueue.add(board);
-                manhattanHashMap.replace(new IntIntArray(arr), board);
-            }
-//            priorityQueue.add(board);
-//            manhattanHashMap.put(board.arr, board);
-//            if(priorityQueue.remove(manhattanHashMap.get(arr))){
-//                System.out.println("removed");
+//            else if (boardHashMap.get(new IntIntArray(arr)).total_cost > board.total_cost) {
+//                priorityQueue.remove(boardHashMap.get(new IntIntArray(arr)));
+//                board.parent = b;
+//                priorityQueue.add(board);
+//                boardHashMap.replace(new IntIntArray(arr), board);
 //            }
 
         }
-        manhattanHashMapDone.put(new IntIntArray(b.arr), b);
+        boardHashMapDone.put(new IntIntArray(b.arr), b);
     }
 
     private static void setManhattanDistance(Board b) {
         b.huristic_cost = 0;
         for (int i = 0; i < b.arr.length; i++) {
             for (int j = 0; j < b.arr[i].length; j++) {
-                int exact_column = (b.arr[i][j] - 1)% b.arr.length;
+                int exact_column = (b.arr[i][j] - 1) % b.arr.length;
                 int exact_row = (b.arr[i][j] - 1) / b.arr.length;
-                if (b.arr[i][j] != 0) b.huristic_cost += Math.abs(exact_column - j) + Math.abs(exact_row - i) ;
+                if (b.arr[i][j] != 0) b.huristic_cost += Math.abs(exact_column - j) + Math.abs(exact_row - i);
             }
         }
         b.total_cost = b.previous_cost + b.huristic_cost;
