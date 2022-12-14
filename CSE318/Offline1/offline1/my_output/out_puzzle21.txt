@@ -1,3 +1,160 @@
-solveable
-=========
-starting Hamming
+
+
+starting Manhattan
+optimal cost : 21
+printing optimal path:
+=============================
+step : 0
+5 2 3 
+4 7 * 
+8 6 1 
+previous cost = 0 :: huristic cost = 11 :: total cost = 11
+=============================
+=============================
+step : 1
+5 2 3 
+4 7 1 
+8 6 * 
+previous cost = 1 :: huristic cost = 10 :: total cost = 11
+=============================
+=============================
+step : 2
+5 2 3 
+4 7 1 
+8 * 6 
+previous cost = 2 :: huristic cost = 9 :: total cost = 11
+=============================
+=============================
+step : 3
+5 2 3 
+4 7 1 
+* 8 6 
+previous cost = 3 :: huristic cost = 8 :: total cost = 11
+=============================
+=============================
+step : 4
+5 2 3 
+* 7 1 
+4 8 6 
+previous cost = 4 :: huristic cost = 9 :: total cost = 13
+=============================
+=============================
+step : 5
+5 2 3 
+7 * 1 
+4 8 6 
+previous cost = 5 :: huristic cost = 8 :: total cost = 13
+=============================
+=============================
+step : 6
+5 2 3 
+7 1 * 
+4 8 6 
+previous cost = 6 :: huristic cost = 7 :: total cost = 13
+=============================
+=============================
+step : 7
+5 2 * 
+7 1 3 
+4 8 6 
+previous cost = 7 :: huristic cost = 8 :: total cost = 15
+=============================
+=============================
+step : 8
+5 * 2 
+7 1 3 
+4 8 6 
+previous cost = 8 :: huristic cost = 9 :: total cost = 17
+=============================
+=============================
+step : 9
+5 1 2 
+7 * 3 
+4 8 6 
+previous cost = 9 :: huristic cost = 8 :: total cost = 17
+=============================
+=============================
+step : 10
+5 1 2 
+* 7 3 
+4 8 6 
+previous cost = 10 :: huristic cost = 9 :: total cost = 19
+=============================
+=============================
+step : 11
+* 1 2 
+5 7 3 
+4 8 6 
+previous cost = 11 :: huristic cost = 8 :: total cost = 19
+=============================
+=============================
+step : 12
+1 * 2 
+5 7 3 
+4 8 6 
+previous cost = 12 :: huristic cost = 7 :: total cost = 19
+=============================
+=============================
+step : 13
+1 2 * 
+5 7 3 
+4 8 6 
+previous cost = 13 :: huristic cost = 6 :: total cost = 19
+=============================
+=============================
+step : 14
+1 2 3 
+5 7 * 
+4 8 6 
+previous cost = 14 :: huristic cost = 5 :: total cost = 19
+=============================
+=============================
+step : 15
+1 2 3 
+5 7 6 
+4 8 * 
+previous cost = 15 :: huristic cost = 4 :: total cost = 19
+=============================
+=============================
+step : 16
+1 2 3 
+5 7 6 
+4 * 8 
+previous cost = 16 :: huristic cost = 5 :: total cost = 21
+=============================
+=============================
+step : 17
+1 2 3 
+5 * 6 
+4 7 8 
+previous cost = 17 :: huristic cost = 4 :: total cost = 21
+=============================
+=============================
+step : 18
+1 2 3 
+* 5 6 
+4 7 8 
+previous cost = 18 :: huristic cost = 3 :: total cost = 21
+=============================
+=============================
+step : 19
+1 2 3 
+4 5 6 
+* 7 8 
+previous cost = 19 :: huristic cost = 2 :: total cost = 21
+=============================
+=============================
+step : 20
+1 2 3 
+4 5 6 
+7 * 8 
+previous cost = 20 :: huristic cost = 1 :: total cost = 21
+=============================
+=============================
+step : 21
+1 2 3 
+4 5 6 
+7 8 * 
+previous cost = 21 :: huristic cost = 0 :: total cost = 21
+=============================
+expanded : 695	explored : 430

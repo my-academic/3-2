@@ -1,0 +1,188 @@
+
+
+starting Manhattan
+optimal cost : 25
+printing optimal path:
+=============================
+step : 0
+2 8 5 
+3 6 1 
+7 * 4 
+previous cost = 0 :: huristic cost = 15 :: total cost = 15
+=============================
+=============================
+step : 1
+2 8 5 
+3 * 1 
+7 6 4 
+previous cost = 1 :: huristic cost = 16 :: total cost = 17
+=============================
+=============================
+step : 2
+2 8 5 
+3 1 * 
+7 6 4 
+previous cost = 2 :: huristic cost = 15 :: total cost = 17
+=============================
+=============================
+step : 3
+2 8 5 
+3 1 4 
+7 6 * 
+previous cost = 3 :: huristic cost = 14 :: total cost = 17
+=============================
+=============================
+step : 4
+2 8 5 
+3 1 4 
+7 * 6 
+previous cost = 4 :: huristic cost = 13 :: total cost = 17
+=============================
+=============================
+step : 5
+2 8 5 
+3 1 4 
+* 7 6 
+previous cost = 5 :: huristic cost = 14 :: total cost = 19
+=============================
+=============================
+step : 6
+2 8 5 
+* 1 4 
+3 7 6 
+previous cost = 6 :: huristic cost = 15 :: total cost = 21
+=============================
+=============================
+step : 7
+2 8 5 
+1 * 4 
+3 7 6 
+previous cost = 7 :: huristic cost = 14 :: total cost = 21
+=============================
+=============================
+step : 8
+2 * 5 
+1 8 4 
+3 7 6 
+previous cost = 8 :: huristic cost = 13 :: total cost = 21
+=============================
+=============================
+step : 9
+* 2 5 
+1 8 4 
+3 7 6 
+previous cost = 9 :: huristic cost = 12 :: total cost = 21
+=============================
+=============================
+step : 10
+1 2 5 
+* 8 4 
+3 7 6 
+previous cost = 10 :: huristic cost = 11 :: total cost = 21
+=============================
+=============================
+step : 11
+1 2 5 
+3 8 4 
+* 7 6 
+previous cost = 11 :: huristic cost = 10 :: total cost = 21
+=============================
+=============================
+step : 12
+1 2 5 
+3 8 4 
+7 * 6 
+previous cost = 12 :: huristic cost = 9 :: total cost = 21
+=============================
+=============================
+step : 13
+1 2 5 
+3 * 4 
+7 8 6 
+previous cost = 13 :: huristic cost = 8 :: total cost = 21
+=============================
+=============================
+step : 14
+1 2 5 
+* 3 4 
+7 8 6 
+previous cost = 14 :: huristic cost = 7 :: total cost = 21
+=============================
+=============================
+step : 15
+* 2 5 
+1 3 4 
+7 8 6 
+previous cost = 15 :: huristic cost = 8 :: total cost = 23
+=============================
+=============================
+step : 16
+2 * 5 
+1 3 4 
+7 8 6 
+previous cost = 16 :: huristic cost = 9 :: total cost = 25
+=============================
+=============================
+step : 17
+2 3 5 
+1 * 4 
+7 8 6 
+previous cost = 17 :: huristic cost = 8 :: total cost = 25
+=============================
+=============================
+step : 18
+2 3 5 
+1 4 * 
+7 8 6 
+previous cost = 18 :: huristic cost = 7 :: total cost = 25
+=============================
+=============================
+step : 19
+2 3 * 
+1 4 5 
+7 8 6 
+previous cost = 19 :: huristic cost = 6 :: total cost = 25
+=============================
+=============================
+step : 20
+2 * 3 
+1 4 5 
+7 8 6 
+previous cost = 20 :: huristic cost = 5 :: total cost = 25
+=============================
+=============================
+step : 21
+* 2 3 
+1 4 5 
+7 8 6 
+previous cost = 21 :: huristic cost = 4 :: total cost = 25
+=============================
+=============================
+step : 22
+1 2 3 
+* 4 5 
+7 8 6 
+previous cost = 22 :: huristic cost = 3 :: total cost = 25
+=============================
+=============================
+step : 23
+1 2 3 
+4 * 5 
+7 8 6 
+previous cost = 23 :: huristic cost = 2 :: total cost = 25
+=============================
+=============================
+step : 24
+1 2 3 
+4 5 * 
+7 8 6 
+previous cost = 24 :: huristic cost = 1 :: total cost = 25
+=============================
+=============================
+step : 25
+1 2 3 
+4 5 6 
+7 8 * 
+previous cost = 25 :: huristic cost = 0 :: total cost = 25
+=============================
+expanded : 2217	explored : 1408

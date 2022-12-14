@@ -1,0 +1,55 @@
+
+
+starting Manhattan
+optimal cost : 6
+printing optimal path:
+=============================
+step : 0
+1 2 * 
+4 8 3 
+7 6 5 
+previous cost = 0 :: huristic cost = 6 :: total cost = 6
+=============================
+=============================
+step : 1
+1 2 3 
+4 8 * 
+7 6 5 
+previous cost = 1 :: huristic cost = 5 :: total cost = 6
+=============================
+=============================
+step : 2
+1 2 3 
+4 8 5 
+7 6 * 
+previous cost = 2 :: huristic cost = 4 :: total cost = 6
+=============================
+=============================
+step : 3
+1 2 3 
+4 8 5 
+7 * 6 
+previous cost = 3 :: huristic cost = 3 :: total cost = 6
+=============================
+=============================
+step : 4
+1 2 3 
+4 * 5 
+7 8 6 
+previous cost = 4 :: huristic cost = 2 :: total cost = 6
+=============================
+=============================
+step : 5
+1 2 3 
+4 5 * 
+7 8 6 
+previous cost = 5 :: huristic cost = 1 :: total cost = 6
+=============================
+=============================
+step : 6
+1 2 3 
+4 5 6 
+7 8 * 
+previous cost = 6 :: huristic cost = 0 :: total cost = 6
+=============================
+expanded : 13	explored : 7

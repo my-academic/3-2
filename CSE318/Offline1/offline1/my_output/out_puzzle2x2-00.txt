@@ -1,0 +1,12 @@
+
+
+starting Manhattan
+optimal cost : 0
+printing optimal path:
+=============================
+step : 0
+1 2 
+3 * 
+previous cost = 0 :: huristic cost = 0 :: total cost = 0
+=============================
+expanded : 0	explored : 0
