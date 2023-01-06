@@ -1,0 +1,68 @@
+
+http request:
+GET /root/dir1 HTTP/1.1
+http response: 
+HTTP/1.1 200 OK
+Server: Java HTTP Server: 1.0
+Date: Fri Jan 06 10:58:11 BDT 2023
+Content-Type: text/html
+Content-Length: 390
+
+
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /root/dir1/dir2 HTTP/1.1
+http response: 
+HTTP/1.1 200 OK
+Server: Java HTTP Server: 1.0
+Date: Fri Jan 06 10:58:14 BDT 2023
+Content-Type: text/html
+Content-Length: 250
+
+
+http request:
+GET /root/dir1 HTTP/1.1
+http response: 
+HTTP/1.1 200 OK
+Server: Java HTTP Server: 1.0
+Date: Fri Jan 06 10:58:20 BDT 2023
+Content-Type: text/html
+Content-Length: 390
+
+
+http request:
+GET /root HTTP/1.1
+http response: 
+HTTP/1.1 200 OK
+Server: Java HTTP Server: 1.0
+Date: Fri Jan 06 10:58:21 BDT 2023
+Content-Type: text/html
+Content-Length: 619
+
+
+http request:
+GET /root/abcd.txt HTTP/1.1
+http response: 
+HTTP/1.1 200 OK
+Server: Java HTTP Server: 1.0
+Date: Fri Jan 06 10:58:24 BDT 2023
+Content-Type: text/html
+Content-Length: 2
+
+
+http request:
+GET /root/time_lapse.mkv HTTP/1.1
+http response: 
+HTTP/1.1 200 OK
+Server: Java HTTP Server: 1.0
+Date: Fri Jan 06 10:58:33 BDT 2023
+Content-Disposition: attachment;
+filename="time_lapse.mkv"
+Content-Type: application/force-download
+Content-Length: 870219075
+
