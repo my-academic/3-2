@@ -40,7 +40,7 @@ public class Main {
         nextVariables[4] = new VAH5();
         for (int i = 0; i < 5; i++) {
 
-            if(i == 0 || i == 2 || i == 3 || i == -1) continue;
+            if(i == 0 || i == 2 || i == 3 || i == 4) continue;
 
             CSP csp = new CSP(n);
 
