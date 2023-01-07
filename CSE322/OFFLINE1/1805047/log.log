@@ -66,3 +66,485 @@ filename="time_lapse.mkv"
 Content-Type: application/force-download
 Content-Length: 870219075
 
+
+http request:
+GET / HTTP/1.1
+http request:
+GET / HTTP/1.1
+http request:
+GET / HTTP/1.1
+http request:
+GET / HTTP/1.1
+http request:
+GET / HTTP/1.1
+http request:
+GET / HTTP/1.1
+http request:
+GET / HTTP/1.1
+http request:
+GET / HTTP/1.1
+http request:
+GET / HTTP/1.1
+http request:
+GET / HTTP/1.1
+http request:
+GET /root HTTP/1.1
+http response: 
+HTTP/1.1 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Jan 07 08:53:05 BDT 2023
+Content-Type: text/html
+Content-Length: 297
+
+
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /root/dir1 HTTP/1.1
+http response: 
+HTTP/1.1 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Jan 07 08:53:07 BDT 2023
+Content-Type: text/html
+Content-Length: 390
+
+
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /root/dir1/dir2 HTTP/1.1
+http response: 
+HTTP/1.1 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Jan 07 08:53:08 BDT 2023
+Content-Type: text/html
+Content-Length: 250
+
+
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /root/dir1/dir2/dir3 HTTP/1.1
+http response: 
+HTTP/1.1 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Jan 07 08:53:09 BDT 2023
+Content-Type: text/html
+Content-Length: 193
+
+
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /root/dir1/dir2/dir3/file3.txt HTTP/1.1
+http response: 
+HTTP/1.1 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Jan 07 08:53:11 BDT 2023
+Content-Type: text/html
+Content-Length: 0
+
+
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /root/dir1/dir2/send.txt HTTP/1.1
+http response: 
+HTTP/1.1 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Jan 07 08:53:16 BDT 2023
+Content-Type: text/html
+Content-Length: 749
+
+
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /root/dir1/imgsend.jpg HTTP/1.1
+http response: 
+HTTP/1.1 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Jan 07 08:53:20 BDT 2023
+Content-Type: image/jpeg
+Content-Length: 2718541
+
+
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET / HTTP/1.1
+http request:
+GET / HTTP/1.1
+http request:
+GET / HTTP/1.1
+http request:
+GET / HTTP/1.1
+http request:
+GET / HTTP/1.1
+http request:
+GET / HTTP/1.1
+http request:
+GET / HTTP/1.1
+http request:
+GET / HTTP/1.1
+http request:
+GET / HTTP/1.1
+http request:
+GET / HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /root HTTP/1.1
+http response: 
+HTTP/1.1 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Jan 07 08:56:20 BDT 2023
+Content-Type: text/html
+Content-Length: 297
+
+
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /favicon.ico HTTP/1.1
+http request:
+GET /root HTTP/1.1
+http response: 
+HTTP/1.1 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Jan 07 08:58:59 BDT 2023
+Content-Type: text/html
+Content-Length: 297
+
+
+http request:
+GET /favicon.ico HTTP/1.1
+http response: 
+HTTP/1.1 404 NOT_FOUND
+Server: Java HTTP Server: 1.0
+Date: Sat Jan 07 08:58:59 BDT 2023
+Content-Type: text/html
+Content-Length: 138
+
+
+http request:
+GET /root HTTP/1.1
+http response: 
+HTTP/1.1 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Jan 07 08:59:03 BDT 2023
+Content-Type: text/html
+Content-Length: 297
+
+
+http request:
+GET /root/dir1 HTTP/1.1
+http response: 
+HTTP/1.1 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Jan 07 08:59:07 BDT 2023
+Content-Type: text/html
+Content-Length: 390
+
+
+http request:
+GET /root/dir1/pdfsend.pdf HTTP/1.1
+http response: 
+HTTP/1.1 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Jan 07 08:59:13 BDT 2023
+Content-Disposition: attachment;
+filename="pdfsend.pdf"
+Content-Type: application/force-download
+Content-Length: 633428
+
+
+http request:
+GET / HTTP/1.1
+http response: 
+HTTP/1.1 404 NOT_FOUND
+Server: Java HTTP Server: 1.0
+Date: Sat Jan 07 08:59:40 BDT 2023
+Content-Type: text/html
+Content-Length: 138
+
+
+http request:
+GET /root HTTP/1.1
+http response: 
+HTTP/1.1 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Jan 07 09:06:52 BDT 2023
+Content-Type: text/html
+Content-Length: 297
+
+
+http request:
+GET /root HTTP/1.1
+http response: 
+HTTP/1.1 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Jan 07 09:07:23 BDT 2023
+Content-Type: text/html
+Content-Length: 360
+
+
+http request:
+GET /root/abcd.txt HTTP/1.1
+http response: 
+HTTP/1.1 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Jan 07 09:07:25 BDT 2023
+Content-Type: text/html
+Content-Length: 2
+
+
+http request:
+GET /root HTTP/1.1
+http response: 
+HTTP/1.1 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Jan 07 09:11:00 BDT 2023
+Content-Type: text/html
+Content-Length: 360
+
+
+http request:
+GET /root/abcd.txt HTTP/1.1
+http response: 
+HTTP/1.1 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Jan 07 09:11:02 BDT 2023
+Content-Type: text/html
+Content-Length: 2
+
+
+http request:
+GET /root HTTP/1.1
+http response: 
+HTTP/1.1 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Jan 07 09:33:07 BDT 2023
+Content-Type: text/html
+Content-Length: 360
+
