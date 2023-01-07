@@ -4,7 +4,6 @@ import java.util.concurrent.TimeUnit;
 
 public class CSP {
     public Variable[][] variables;
-    public Constraint constraint;
     public ArrayList<Variable> unassigneds;
 
     public CSP(int n) {
@@ -66,10 +65,6 @@ public class CSP {
         }
 
         return str;
-    }
-
-    public boolean isValid(Variable variable, Integer domain) {
-        return constraint.isValid(variables, variable, domain);
     }
 
     public boolean isComplete() throws InterruptedException {
