@@ -38,9 +38,9 @@ public class Main {
         nextVariables[2] = new VAH3();
         nextVariables[3] = new VAH4();
         nextVariables[4] = new VAH5();
-        for (int i = 0; i < 5; i++) {
+        for (int i = 4; i >= 0; i--) {
 
-            if(i == 0 || i == 2 || i == 3 || i == 4) continue;
+            if(i == 0 || i == 2 || i == 3 || i == 0) continue;
 
             CSP csp = new CSP(n);
 
@@ -55,7 +55,7 @@ public class Main {
 
             System.out.println("vah => " + (i + 1));
             Solver solver = new Solver(nextVariables[i]);
-            var x = solver.backtrackingSearch(csp);
+            var x = solver.forwardCheckingSearch(csp);
             System.out.println("\n================================\n\n");
             System.out.println(x);
             // System.out.println(csp);
